@@ -1,5 +1,6 @@
 from src.grammer.grammer import *
 from src.automaton.automaton import *
+from src.grammer.lexer import *
 from visual_automata.fa.dfa import VisualDFA
 import visual_automata
 from visual_automata.fa.nfa import *
@@ -52,15 +53,14 @@ for production in grammar3:
 print(equal)
 print("equal to the original\n")
 
-nfa_states = {'q0', 'q1', 'q2'}
-nfa_alphabet = {'0', '1'}
+nfa_states = {'q0', 'q1', 'q2', 'q3'}
+nfa_alphabet = {'a', 'b', 'c'}
 nfa_transitions = {
-    ('q0', '0'): {'q0'},
-    ('q0', '1'): {'q0', 'q1'},
-    ('q1', '0'): {'q2'},
-    ('q1', '1'): {'q2'},
-    ('q2', '0'): {'q2'},
-    ('q2', '1'): {'q2'}
+    ('q0', 'a'): {'q0', 'q1'},
+    ('q1', 'c'): {'q1'},
+    ('q1', 'b'): {'q2'},
+    ('q2', 'b'): {'q3'},
+    ('q3', 'a'): {'q1'}
 }
 nfa_start_state = 'q0'
 nfa_accept_states = {'q2'}
@@ -104,6 +104,27 @@ new_dfa = DFA(
     allow_partial=True
 )
 
-print()
-print(new_dfa.show_diagram())
+string = '''
+public class Test {
 
+   public static void main(String args[]) {
+      int [] numbers = {10, 20, 30, 40, 50};
+      // printing !
+      for(int x : numbers ) {
+         System.out.print( x );
+         System.out.print(",");
+      }
+      System.out.print("\n");
+      String [] names = {"James", "Larry", "Tom", "Lacy"};
+      /*
+      looping over 
+      */
+      for( String name : names ) {
+         System.out.print( name );
+         System.out.print(",");
+      }
+   }
+}
+'''
+
+tokenize(string)
