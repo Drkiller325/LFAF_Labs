@@ -55,9 +55,8 @@ now we need to break down the given script into it's smallest elements:(words,sy
 ```
 which we take and add to a list called lexems
 ```
-           #print(lexeme.replace('\n', '<newline>'))
-                    lexems.append(lexeme)
-                    lexeme = ''
+lexems.append(lexeme)
+lexeme = ''
 ```
 then we need to compare every lexeme to the list's of the keyword and classify them accordingly
 *this is a part of the whole script
