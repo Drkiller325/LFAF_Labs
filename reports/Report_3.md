@@ -98,4 +98,5 @@ token: number Value: 5
 for a more complex test run i have an entire script in the code that i check
 ## References
 how to build a lexer - https://medium.com/@pythonmembers.club/building-a-lexer-in-python-a-tutorial-3b6de161fe84
+
 technical asistance - chatGPT
