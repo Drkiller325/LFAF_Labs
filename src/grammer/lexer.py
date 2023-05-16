@@ -75,3 +75,5 @@ def tokenize(string):
         elif string in definers:
             print(f"token: Definer Value: {string}")
 
+    print(lexems)
+

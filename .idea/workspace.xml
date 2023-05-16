@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c780212c-d302-42db-a1d2-01a49436b4ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/grammer/lexer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/grammer/grammer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/grammer/grammer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/grammer/lexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/grammer/lexer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,13 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678218688052</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Lab_3 updates">
+      <created>1683586619445</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683586619445</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first_Commit" />
     <MESSAGE value="adding reports folder" />
     <MESSAGE value="Lab_2 updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab_2 updates" />
+    <MESSAGE value="Lab_3 updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab_3 updates" />
   </component>
 </project>

@@ -128,3 +128,19 @@ public class Test {
 '''
 
 tokenize(string)
+
+Vn = ['S','A','B','C','D','E']
+Vt = ['a','b']
+S = 'S'
+P = {
+    "S": ["aB", "AC"],
+    "A": ["a", "ASC", "BC", "aD"],
+    "B": ["b", "bS"],
+    "C": [None],
+    "D": ["abC"],
+    "E": ["aB"]
+}
+grammar_1 = Grammar(S,Vn,Vt,P)
+
+normalize(grammar_1)
+
