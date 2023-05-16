@@ -186,5 +186,25 @@ n = 1
                                 grammar.productions[nonterminal][index] = grammar.productions[nonterminal][index].replace(letter,f'X{n}')
                                 n += 1
 ```
+## Conclusions / Screenshots / Results
+Results:
+i show what happens to the productions after each step to test the functionallity of each piece of code
+so the results look smth like this:
+```
+the grammar
+{'S': ['aB', 'AC'], 'A': ['a', 'ASC', 'BC', 'aD'], 'B': ['b', 'bS'], 'C': [None], 'D': ['abC'], 'E': ['aB']}
+eliminate epsilon production
+{'S': ['aB', 'AC'], 'A': ['a', 'ASC', 'BC', 'aD'], 'B': ['b', 'bS'], 'D': ['abC'], 'E': ['aB']}
+add the unit productions and epsilon substitutions
+{'S': ['aB', 'AC', 'A', 'a', 'ASC', 'BC', 'aD', 'AS', 'B', 'b', 'bS'], 'A': ['a', 'ASC', 'BC', 'aD', 'AS', 'B', 'b', 'bS'], 'B': ['b', 'bS'], 'D': ['abC', 'ab'], 'E': ['aB']}
+mark the unit and empty productions (C) for deletion and add them here in form (nonterminal,index)
+[('S', 1), ('S', 1), ('S', 2), ('S', 2), ('S', 4), ('A', 1), ('A', 1), ('A', 3), ('D', 0)]
+delete inaccesable oroductions
+{'S': ['aB', 'AC', 'A', 'a', 'ASC', 'BC', 'aD', 'AS', 'B', 'b', 'bS'], 'A': ['a', 'ASC', 'BC', 'aD', 'AS', 'B', 'b', 'bS'], 'B': ['b', 'bS'], 'D': ['abC', 'ab']}
+delete marked productions
+{'S': ['aB', 'a', 'aD', 'AS', 'b', 'bS'], 'A': ['a', 'aD', 'AS', 'b', 'bS'], 'B': ['b', 'bS'], 'D': ['ab']}
+transform into normal form(CNF)
+{'S': ['X1B', 'a', 'X1D', 'AS', 'b', 'X2S'], 'A': ['a', 'X1D', 'AS', 'b', 'X2S'], 'B': ['b', 'X2S'], 'D': ['ab'], 'X1': ['a'], 'X2': ['b']}
+```
 
 
