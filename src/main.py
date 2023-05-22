@@ -1,6 +1,7 @@
 from src.grammer.grammer import *
 from src.automaton.automaton import *
 from src.grammer.lexer import *
+from src.automaton.parser import *
 from visual_automata.fa.dfa import VisualDFA
 import visual_automata
 from visual_automata.fa.nfa import *
@@ -144,3 +145,17 @@ grammar_1 = Grammar(S,Vn,Vt,P)
 
 normalize(grammar_1)
 
+string2 = '5+(7-3)*3+17*3 '
+tokens = tokenize(string2)
+
+parser = Parser(tokens)
+ast = parser.parse()
+def print_ast(node, indent=''):
+    print(indent + str(node.node_type), node.value)
+    for child in node.children:
+        print_ast(child, indent + '  ')
+
+print("AST:")
+print_ast(ast)
+result = parser.evaluate(ast)
+print("\nResult:", result)
